@@ -1,0 +1,23 @@
+# Simple code compiled via easy_compiler.c
+# Can be also interpreted via easy_interpreter.c
+# Only the following operation are supported
+# ==========================================================
+# Compile:   ./build_e.sh code.txt exe
+# Execution: ./exe
+# ==========================================================
+# gcc easy_interpreter.c -o easyint -Wall -pedantic -O3  (Only the first time)
+# ./easyint <executable_name> 
+
+a = 2
+b = 4
+c = a + b  # addition
+d = b - a  # subtraction
+e = a * b  # multiplication
+f = b / a  # division
+
+print a
+print b
+print c
+print d
+print e
+print f
