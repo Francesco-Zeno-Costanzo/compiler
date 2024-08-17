@@ -1,0 +1,10 @@
+int x = 10;
+
+while(x ge 0){
+
+    print("Hello World!");
+    
+    x = x - 1;
+}
+
+exit(0);
