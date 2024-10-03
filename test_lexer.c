@@ -3,8 +3,6 @@
 
 #include "lexer.h" 
 
-extern size_t line_number;  // External declaration for global variable
-
 int main() {
 
     // Open a file

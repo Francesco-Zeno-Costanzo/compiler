@@ -9,43 +9,43 @@
 size_t line_number = 0;  // line of source file
 
 void print_token(Token token){
-  printf("TOKEN VALUE: ");
-  printf("'");
-  for(int i = 0; token.value[i] != '\0'; i++){
-    printf("%c", token.value[i]);
-  }
-  printf("'");
-  printf("\nline number: %zu", token.line_num);
+    printf("TOKEN VALUE: ");
+    printf("'");
+    for(int i = 0; token.value[i] != '\0'; i++){
+        printf("%c", token.value[i]);
+    }
+    printf("'");
+    printf("\nline number: %zu", token.line_num);
 
-  switch(token.type){
-    case TOKEN_NUMBER:
-      printf(" TOKEN TYPE: INT\n");
-      break;
-    case TOKEN_KEYWORD:
-      printf(" TOKEN TYPE: KEYWORD\n");
-      break;
-    case TOKEN_SEPARATOR:
-      printf(" TOKEN TYPE: SEPARATOR\n");
-      break;
-    case TOKEN_OPERATOR:
-      printf(" TOKEN TYPE: OPERATOR\n");
-      break;
-    case TOKEN_IDENTIFIER:
-      printf(" TOKEN TYPE: IDENTIFIER\n");
-      break;
-    case TOKEN_STRING:
-      printf(" TOKEN TYPE: STRING\n");
-      break;
-    case TOKEN_COMP:
-      printf(" TOKEN TYPE: COMPARATOR\n");
-      break;
-    case TOKEN_EOF:
-      printf(" END OF TOKENS\n");
-      break;
-    case TOKEN_BEGINNING:
-      printf("BEGINNING\n");
-      break;
-  }
+    switch(token.type){
+        case TOKEN_NUMBER:
+            printf(" TOKEN TYPE: INT\n");
+            break;
+        case TOKEN_KEYWORD:
+            printf(" TOKEN TYPE: KEYWORD\n");
+            break;
+        case TOKEN_SEPARATOR:
+            printf(" TOKEN TYPE: SEPARATOR\n");
+            break;
+        case TOKEN_OPERATOR:
+            printf(" TOKEN TYPE: OPERATOR\n");
+            break;
+        case TOKEN_IDENTIFIER:
+            printf(" TOKEN TYPE: IDENTIFIER\n");
+            break;
+        case TOKEN_STRING:
+            printf(" TOKEN TYPE: STRING\n");
+            break;
+        case TOKEN_COMP:
+            printf(" TOKEN TYPE: COMPARATOR\n");
+            break;
+        case TOKEN_EOF:
+            printf(" END OF TOKENS\n");
+            break;
+        case TOKEN_BEGINNING:
+            printf("BEGINNING\n");
+            break;
+    }
 }
 
 
