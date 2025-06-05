@@ -5,10 +5,10 @@
 typedef enum {
     TOKEN_BEGINNING,   // Start of the file
     TOKEN_IDENTIFIER,  // Identifier e.g. name of variable
-    TOKEN_SEPARATOR,   // Parentesis or semicolon
+    TOKEN_SEPARATOR,   // Brackets or semicolon
     TOKEN_NUMBER,      // An integer number
-    TOKEN_OPERATOR,    // Operartor (+, -, *, /, =)
-    TOKEN_COMP,        // Comparison (like fortran neq, eq, less, greater)
+    TOKEN_OPERATOR,    // Operator (+, -, *, /, =)
+    TOKEN_COMP,        // Comparison (like Fortran neq, eq, less, greater)
     TOKEN_STRING,      // String
     TOKEN_KEYWORD,     // Key word like while, print and so on
     TOKEN_EOF,         // End of source file
@@ -17,7 +17,7 @@ typedef enum {
 /* Struct of the token */
 typedef struct {
     TokenType type;   // Type of token    
-    char *value;      // Relative vaule
+    char *value;      // Relative value
     size_t line_num;  // At which line
 } Token;
 
