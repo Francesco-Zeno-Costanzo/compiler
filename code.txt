@@ -1,19 +1,25 @@
+# ====================================================================
 # Simple code compiled via easy_compiler.c
 # Can be also interpreted via easy_interpreter.c
-# Only the following operation are supported
-# ==========================================================
-# Compile:   ./build_e.sh code.txt exe
+# Only the written operation are supported.
+# ====================================================================
+# Firstly you need to create the interpreter or the compiler
+# To do this you must run: ./build.sh
+# This will create two file: easycomp and easyint
+# The first is the compiler for this code the second the interpreter
+# ========================== Compiler Usage ==========================
+# Compile this code: ./build_e.sh code.txt exe
 # Execution: ./exe
-# ==========================================================
-# gcc easy_interpreter.c -o easyint -Wall -pedantic -O3  (Only the first time)
+# ======================== Interpreter Usage =========================
 # ./easyint <executable_name> 
+# ====================================================================
 
 a = 2
 b = 4
-c = a + b  # addition
-d = b - a  # subtraction
-e = a * b  # multiplication
-f = b / a  # division
+c = a + b # addition
+d = b - a # subtraction
+e = a * b # multiplication
+f = b / a # division
 
 print a
 print b

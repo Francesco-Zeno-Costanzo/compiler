@@ -1,11 +1,14 @@
 /*****************************************************************
-Simple code to make a compilator.
-Only the four operetion are implemented and only between integers.
+Simple code to make a compiler.
+Only the four operation are implemented and only between integers.
 Usage:
-chmod +x build_c.sh     | To build the compiler
-./build_c.sh
-chmod +x build_e.sh     | To build the executable
-./build_e.sh <file_name_souce_code> <executable_name>
+1) To build the compiler:
+chmod +x build.sh
+./build.sh
+2) To build the executable
+chmod +x build_e.sh
+3) Execution
+./build_e.sh <file_name_source_code> <executable_name>
 ******************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +17,7 @@ chmod +x build_e.sh     | To build the executable
 #define MAX_CODE_LENGTH 1024
 #define MAX_LINE_LENGTH 128
 
-/* Structure for variable assignament
+/* Structure for variable assignment
    variable = value */
 typedef struct {
     char variable;
@@ -38,17 +41,17 @@ void remove_comment(char *line){
     }
 }
 
-/* Function to analize lines where assignament is made*/
+/* Function to analyze lines where assignment is made*/
 void parse_assignment(char *line, Assignment *assignment){
     sscanf(line, " %c = %d", &assignment->variable, &assignment->value);
 }
 
-/* Function to analize lines where operation is made*/
+/* Function to analyze lines where operation is made*/
 void parse_operation(char *line, Operation *op){
     sscanf(line, " %c = %c %c %c", &op->result, &op->item1, &op->operator, &op->item2);
 }
 
-/* Function to analize print statement*/
+/* Function to analyze print statement*/
 void parse_print(char *line, char *variable){
     sscanf(line, " print %c", variable);
 }
@@ -72,6 +75,8 @@ void generate_assembly(Assignment *assignments, int assignment_count, Operation 
 
     printf("section .text\n");
     printf("extern printf\n"); // Declaration of printf
+    // For simplicity we will use the C print function.
+    // The generated assembly file will then be linked to libc.
     printf("global _start\n"); // Start of the program
 
     printf("_start:\n");

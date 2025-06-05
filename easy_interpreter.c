@@ -1,6 +1,6 @@
 /*****************************************************************
 Simple code to make an interpreter.
-Only the four operetion are implemented and only between integers.
+Only the four operations are implemented and only between integers.
 Usage:
 gcc easy_interpreter.c -o easyint -Wall -pedantic -O3
 ./easyint <executable_name> 
@@ -64,7 +64,7 @@ void evaluate_line(char *line) {
     char var, op, var1, var2;
     int value;
 
-    /* Assignament */
+    /* Assignment */
     if (sscanf(line, " %c = %d", &var, &value) == 2){
         set_variable(var, value);
     }
